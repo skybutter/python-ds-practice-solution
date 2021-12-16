@@ -11,3 +11,14 @@ def sum_floats(nums):
     # hint: to find out if something is a float, you should use the
     # "isinstance" function --- research how to use this to find out
     # if something is a float!
+    # res = 0
+    # for i in nums:
+    #     if isinstance(i, float):
+    #         res = res + i
+    # return res
+    # Solution
+    return sum([val for val in nums if isinstance(val, float)])
+
+
+print(sum_floats([1.5, 2.4, 'awesome', [], 1]))
+print(sum_floats([1, 2, 3]))

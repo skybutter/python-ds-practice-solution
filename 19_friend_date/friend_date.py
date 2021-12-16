@@ -16,3 +16,23 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+    # (name_a, age_a, hobbies_a) = a
+    # (name_b, age_b, hobbies_b) = b
+    # common = set(hobbies_a) & set(hobbies_b)
+    # if len(common) > 0:
+    #     return True
+    # else:
+    #     return False
+    # Solution
+    if set(a[2]) & set(b[2]):
+        return True
+    else:
+        return False
+
+
+elmo = ('Elmo', 5, ['hugging', 'being nice'])
+sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
+gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
+
+print(friend_date(elmo, sauron))
+print(friend_date(sauron, gandalf))

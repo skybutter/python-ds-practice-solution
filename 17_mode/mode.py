@@ -11,3 +11,36 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    # map = {}
+    # for i in nums:
+    #     if i in map:
+    #         map[i] = map[i] + 1
+    #     else:
+    #         map[i] = 1
+    # largest = nums[0]
+    # for k in map.keys():
+    #     if map[k] > largest:
+    #         largest = k
+    # return largest
+    # solution 2
+    # map = {}
+    # for i in nums:
+    #     if i in map:
+    #         map[i] = map[i] + 1
+    #     else:
+    #         map[i] = 1
+    # import operator
+    # largest = max(map.items(), key=operator.itemgetter(1))[0]
+    # return largest
+    # solutions
+    counts = {}
+    for num in nums:
+        counts[num] = counts.get(num, 0) + 1
+    max_value = max(counts.values())
+    for (num, freq) in counts.items():
+        if freq == max_value:
+            return num
+
+
+print(mode([1, 2, 1]))
+print(mode([2, 2, 3, 3, 2]))

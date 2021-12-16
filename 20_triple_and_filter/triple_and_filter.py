@@ -13,3 +13,15 @@ def triple_and_filter(nums):
         >>> triple_and_filter([1, 2])
         []
     """
+    # res = []
+    # for i in nums:
+    #     if i % 4 == 0:
+    #         res.append(i * 3)
+    # return res
+    # Solutions
+    return [val*3 for val in nums if val % 4 == 0]
+
+
+print(triple_and_filter([1, 2, 3, 4]))
+print(triple_and_filter([6, 8, 10, 12]))
+print(triple_and_filter([1, 2]))
